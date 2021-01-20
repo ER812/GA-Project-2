@@ -43,11 +43,11 @@ https://imgur.com/a/e9VXZdV
 
 | Day    | Deliverable                                        | Status     |
 | ------ | -------------------------------------------------- | ---------- |
-| Jan 20 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
-| Jan 21 | Project Approval                                   | Incomplete |
-| Jan 22 | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| Jan 25 | Pseudocode / actual code                           | Incomplete |
-| Jan 26 | MVP                                                | Incomplete |
+| Jan 20 | Prompt / Wireframes / Project Approval             | Incomplete |
+| Jan 21 | Core Application Structure (React, etc.)           | Incomplete |
+| Jan 22 | Core Application Structure (React, etc.)           | Incomplete |
+| Jan 25 | CSS                                                | Incomplete |
+| Jan 26 | CSS / MVP                                          | Incomplete |
 | Jan 27 | Presentations                                      | Incomplete |
 
 ## Priority Matrix
