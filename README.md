@@ -8,7 +8,7 @@ Uses Airtable as a backend for an organization app.
 
 ## Project Name
 
-Errand Runner 
+Errand_Runner 
 
 ## Project Description
 
@@ -22,7 +22,8 @@ Well, it won't automatically run your errands; it will list opening and closing 
 
 ## Wireframes
 
-https://imgur.com/a/20U630m
+https://imgur.com/a/e9VXZdV
+
 
 #### MVP
 
