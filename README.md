@@ -66,7 +66,7 @@ Well, it won't automatically run your errands; it will list opening and closing 
 
 ## Wireframes
 
-https://imgur.com/a/e9VXZdV
+https://imgur.com/a/q2wF1bn
 
 
 #### MVP
@@ -102,12 +102,13 @@ https://imgur.com/a/e9VXZdV
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --------- | :------: | :------------: | :-----------: | :---------: |
-| React - D |  High    |     20 hrs     |       hrs     |       hr    |
-| React - M |  High    |     10 hrs     |       hrs     |       hrs   |
-| CSS - D   |  High    |     20 hrs     |       hr      |       hr    |
-| CSS - M   |  High    |     10 hrs     |       hrs     |       hr    |
-| Map       |   Low    |     10 hrs     |       hrs     |       hrs   |
-| Total     |          |     70 hrs     |       hrs     |       hrs   |
+| Form Page |  High    |     7 hrs      |       hrs     |       hr    |
+| Site Des. |  High    |     7 hrs      |       hrs     |       hr    |
+| Airtable  |  High    |     5 hrs      |       hrs     |       hrs   |
+| List Items|  High    |     5 hrs      |       hrs     |       hr    |
+| Mobile    |  High    |     5 hrs      |       hr      |       hr    |
+| Map       |   Low    |     6 hrs      |       hrs     |       hrs   |
+| Total     |          |     45 hrs     |       hrs     |       hrs   |
 
 ## Code Snippet
 
