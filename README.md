@@ -18,43 +18,47 @@ Well, it won't automatically run your errands; it will list opening and closing 
 
 ```
 {
-    "records": [
-        {
             "id": "recx6pEXUyLqHiRge",
             "fields": {
-                "Organization": "Grocery",
-                "Notes": "Expensive",
-                "Payments Accepted": [
+                "notes": "Expensive",
+                "closingHours": "9.00",
+                "errand": "buy groceries",
+                "openingHours": 9,
+                "organization": "Grocery",
+                "paymentsAccepted": [
                     "Visa",
                     "Amex",
                     "Cash",
                     "Mobile"
-                ],
-                "Hours": "9.00 - 21.00"
+                ]
             },
             "createdTime": "2021-01-20T16:38:25.000Z"
         },
         {
             "id": "recMWmlOPeRr1YRym",
             "fields": {
-                "Organization": "Pharmacy",
-                "Notes": "Dirty",
-                "Payments Accepted": [
+                "notes": "Dirty",
+                "closingHours": "17.00",
+                "errand": "pick up meds",
+                "openingHours": 9,
+                "organization": "Pharmacy",
+                "paymentsAccepted": [
                     "Visa"
-                ],
-                "Hours": "9.00 - 17.00"
+                ]
             },
             "createdTime": "2021-01-20T16:38:25.000Z"
         },
         {
             "id": "recC4fhmi6kwM3pxP",
             "fields": {
-                "Organization": "Lanudromat",
-                "Notes": "Loud",
-                "Payments Accepted": [
+                "notes": "Loud",
+                "closingHours": "0.00",
+                "errand": "wash clothes",
+                "openingHours": 0,
+                "organization": "Lanudromat",
+                "paymentsAccepted": [
                     "Cash"
-                ],
-                "Hours": "0.00-0.00"
+                ]
             },
             "createdTime": "2021-01-20T16:38:25.000Z"
         }
