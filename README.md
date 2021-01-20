@@ -12,7 +12,7 @@ Errand Runner
 
 ## Project Description
 
-Well, it won't automatically run your errands but, it will list opening and closing times. 
+Well, it won't automatically run your errands; it will list opening and closing times. 
 
 ## Data Sample
 
@@ -22,7 +22,7 @@ Well, it won't automatically run your errands but, it will list opening and clos
 
 ## Wireframes
 
-
+https://imgur.com/a/20U630m
 
 #### MVP
 
