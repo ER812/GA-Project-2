@@ -58,12 +58,12 @@ https://imgur.com/a/e9VXZdV
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --------- | :------: | :------------: | :-----------: | :---------: |
-| ....      |          |        hrs     |       hrs     |       hr    |
-| ...       |          |        hrs     |       hrs     |       hrs   |
-| .....     |          |        hr      |       hr      |       hr    |
-| .....     |          |       hrs      |       hrs     |       hr    |
-| ...       |          |        hrs     |       hrs     |       hrs   |
-| Total     |          |        hrs     |       hrs     |       hrs   |
+| React - D |  High    |     20 hrs     |       hrs     |       hr    |
+| React - M |  High    |     10 hrs     |       hrs     |       hrs   |
+| CSS - D   |  High    |     20 hrs     |       hr      |       hr    |
+| CSS - M   |  High    |     10 hrs     |       hrs     |       hr    |
+| Map       |   Low    |     10 hrs     |       hrs     |       hrs   |
+| Total     |          |     70 hrs     |       hrs     |       hrs   |
 
 ## Code Snippet
 
