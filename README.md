@@ -70,7 +70,7 @@ Well, it won't automatically run your errands; it will list opening and closing 
 
 ## Wireframes
 
-https://imgur.com/a/q2wF1bn
+https://imgur.com/a/tWpNOIQ
 
 
 #### MVP
