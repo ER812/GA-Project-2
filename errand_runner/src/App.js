@@ -5,6 +5,8 @@ import { useState } from "react";
 import Nav from "./components/Nav";
 import axios from "axios";
 import { baseURL, config } from "./services";
+import form from "./components/form";
+
 
 function App() {
   // one state for table
@@ -24,12 +26,12 @@ function App() {
     <div className="App">
       <Nav />
       <Route exact path="/">
-        {tables.map((table) => {
+        {errands.map((table) => {
           <Link to={`/table/${table.id}`}>{table.fields.name}</Link>;
         })}
       </Route>
       <Route path="/new">
-        <h2>This is the Form</h2>
+        <Form />
       </Route>
       <Route path="/table/:id">
         <h2>This is a specific errand.</h2>
