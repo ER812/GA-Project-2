@@ -1,10 +1,12 @@
 import { useState } from "react";
+import axios from "axios";
+import {baseURL, config} from "../services"
 
-function form(props) {
+function Form(props) {
   const [errand, setErrand] = useState("");
   const [organization, setOrganization] = useState("");
   const [notes, setNotes] = useState("");
-  const [payments, setPayments] = useState("Visa");
+  const [payments, setPayments] = useState('Visa');
   const [opening, setOpening] = useState(1);
   const [closing, setClosing] = useState(1);
 
@@ -18,7 +20,8 @@ function form(props) {
       opening, 
       closing,
     }
-    await axios.post()
+    const resp = await axios.post(baseURL, { fields }, config)
+    console.log(resp)
   }
 
   return (
@@ -49,7 +52,7 @@ function form(props) {
       {/* <input type="text" /> */}
       <select
         name="payments"
-        multiple={true}
+        // multiple={true}
         value={payments}
         onChange={(e) => setPayments(e.target.value)}
       >
@@ -77,4 +80,4 @@ function form(props) {
   );
 }
 
-export default form;
+export default Form;

@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import "./App.css";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { useState } from "react";
 import Nav from "./components/Nav";
 import axios from "axios";
 import { baseURL, config } from "./services";
-// import Form from "./components/Form";
+import Form from "./components/Form";
+import Home from "./components/Home";
+import Show from "./components/Show";
 
 function App() {
   // one state for table
@@ -25,16 +27,12 @@ function App() {
     <div className="App">
       <Nav />
       <Route exact path="/">
-        {errands.map((table) => {
-          <Link to={`/table/${table.id}`}>{table.fields.name}</Link>;
-        })}
+        {errands && <Home errands={errands} />}
       </Route>
       <Route path="/new">
         <Form />
       </Route>
-      <Route path="/table/:id">
-        <h2>This is a specific errand.</h2>
-      </Route>
+      <Route path="/table/:id">{errands && <Show errands={errands} />}</Route>
     </div>
   );
 }
