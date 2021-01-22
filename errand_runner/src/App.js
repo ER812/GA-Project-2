@@ -5,8 +5,7 @@ import { useState } from "react";
 import Nav from "./components/Nav";
 import axios from "axios";
 import { baseURL, config } from "./services";
-import form from "./components/form";
-
+// import Form from "./components/Form";
 
 function App() {
   // one state for table
