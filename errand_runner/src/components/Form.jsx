@@ -1,14 +1,30 @@
 import { useState } from "react";
 import axios from "axios";
-import {baseURL, config} from "../services"
+import { baseURL, config } from "../services";
+import { useHistory } from "react-router-dom";
+
 
 function Form(props) {
   const [errand, setErrand] = useState("");
   const [organization, setOrganization] = useState("");
   const [notes, setNotes] = useState("");
-  const [payments, setPayments] = useState('Visa');
-  const [opening, setOpening] = useState(1);
-  const [closing, setClosing] = useState(1);
+  const [paymentsAccepted, setPaymentsAccepted] = useState([]);
+  const [openingHours, setOpeningHours] = useState(1);
+  const [closingHours, setClosingHours] = useState(1);
+
+  let history = useHistory()
+
+  const paymentOptions = ['Visa', 'Amex', 'Mobile', 'Cash'];
+
+  // HandleChange for our paymentsAccepted based on paymentOptions above
+  const handleChange = (po, e) => {
+    const { checked } = e.target;
+    if (checked) {
+      setPaymentsAccepted([...paymentsAccepted, po]);
+    } else {
+      setPaymentsAccepted(paymentsAccepted.filter((p) => p !== po));
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -16,12 +32,13 @@ function Form(props) {
       errand,
       organization, 
       notes, 
-      payments,
-      opening, 
-      closing,
+      paymentsAccepted,
+      openingHours, 
+      closingHours,
     }
     const resp = await axios.post(baseURL, { fields }, config)
-    console.log(resp)
+    props.setToggle((prev) => !prev)
+    history.push("/")
   }
 
   return (
@@ -48,32 +65,26 @@ function Form(props) {
         value={notes}
         onChange={(e) => setNotes(e.target.value)}
       />
-      <label htmlFor="payments">Payment</label>
-      {/* <input type="text" /> */}
-      <select
-        name="payments"
-        // multiple={true}
-        value={payments}
-        onChange={(e) => setPayments(e.target.value)}
-      >
-        <option value="Visa">Visa</option>
-        <option value="Amex">Amex</option>
-        <option value="Cash">Cash</option>
-        <option value="Mobile">Mobile</option>
-      </select>
-      <label htmlFor="opening">Opening Hours</label>
+      {/* Mapping through paymentOptions below to make individual checkboxes for each option */}
+      {paymentOptions.map((po) => (
+        <>
+          <label htmlFor={po}>{po}</label> 
+          <input name={po} type="checkbox" checked={paymentsAccepted.includes(po)} onChange={(e) => handleChange(po, e)} />
+        </>
+      ))}
+      <label htmlFor="openingHours">Opening Hours</label>
       <input
-        name="opening"
+        name="openingHours"
         type="number"
-        value={opening}
-        onChange={(e) => setOpening(e.target.value)}
+        value={openingHours}
+        onChange={(e) => setOpeningHours(e.target.valueAsNumber)}
       />
-      <label htmlFor="closing">Closing Hours</label>
+      <label htmlFor="closingHours">Closing Hours</label>
       <input
-        name="closing"
+        name="closingHours"
         type="number"
-        value={closing}
-        onChange={(e) => setClosing(e.target.value)}
+        value={closingHours}
+        onChange={(e) => setClosingHours(e.target.valueAsNumber)}
       />
       <button type="submit">Submit</button>
     </form>

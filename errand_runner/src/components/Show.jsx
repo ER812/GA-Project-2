@@ -6,7 +6,8 @@ function Show(props) {
   const errand = props.errands.find((errand) => {
     return errand.id === params.id
   })
-  console.log(errand)
+
+
   return (
     <div>
       <h1>{errand.fields.organization}</h1>

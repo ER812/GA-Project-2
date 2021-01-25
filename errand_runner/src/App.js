@@ -8,10 +8,12 @@ import { baseURL, config } from "./services";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import Show from "./components/Show";
+import Footer from "./components/Footer";
 
 function App() {
   // one state for table
   const [errands, setErrands] = useState([]);
+  const [toggle, setToggle] = useState(false)
 
   // one state for toggle
   // get data from api when toggle changes
@@ -21,7 +23,7 @@ function App() {
       setErrands(resp.data.records);
     };
     getTable();
-  }, []);
+  }, [toggle]);
 
   return (
     <div className="App">
@@ -30,9 +32,10 @@ function App() {
         {errands && <Home errands={errands} />}
       </Route>
       <Route path="/new">
-        <Form />
+        <Form setToggle={setToggle}/>
       </Route>
       <Route path="/table/:id">{errands && <Show errands={errands} />}</Route>
+      <Footer />
     </div>
   );
 }
