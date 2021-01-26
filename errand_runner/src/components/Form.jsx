@@ -66,12 +66,14 @@ function Form(props) {
         onChange={(e) => setNotes(e.target.value)}
       />
       {/* Mapping through paymentOptions below to make individual checkboxes for each option */}
+      <div className="paymentOptions">
       {paymentOptions.map((po) => (
         <>
           <label htmlFor={po}>{po}</label> 
           <input name={po} type="checkbox" checked={paymentsAccepted.includes(po)} onChange={(e) => handleChange(po, e)} />
         </>
       ))}
+      </div>
       <label htmlFor="openingHours">Opening Hours</label>
       <input
         name="openingHours"

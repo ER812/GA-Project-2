@@ -1,16 +1,31 @@
 /* #f7fff7, #343434, #2f3061, #ffe66d, #6ca6c1 */
 
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 nav {
   display: flex;
-  padding: 5px;
+  padding: 10px;
   width: 100vw;
   box-sizing: border-box;
   justify-content: space-between;
   border-bottom: 1px solid #6ca6c1;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin: 0 auto;
+}
+
 nav a,
-main a {
+main a,
+form {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s;
@@ -32,4 +47,30 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.showText {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+  font-family: "Source Sans Pro";
+  font-weight: 900;
+  color: #6ca6c1;
+  align-items: center;
+  justify-content: center;
 }

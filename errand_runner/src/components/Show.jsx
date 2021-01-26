@@ -9,8 +9,14 @@ function Show(props) {
 
 
   return (
-    <div>
-      <h1>{errand.fields.organization}</h1>
+    <div className="showText">
+      <h1>Location:{errand.fields.organization}</h1>
+      <h2>Errand:{errand.fields.errand}</h2>
+      <h2>Notes:{errand.fields.notes}</h2>
+      <h2>Payments Accepted:{errand.fields.paymentsAccepted}</h2>
+      {/* <h2>{errand.fields.openingHours}</h2> */}
+      {/* <h2>{errand.fields.closingHours}</h2> */}
+      
     </div>
   )
 }
